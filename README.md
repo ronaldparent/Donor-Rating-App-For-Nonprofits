@@ -1,106 +1,96 @@
 # Donor-Rating-App-For-Nonprofits
 Custom Jupyter Notebook and Shiny R Studio App For Predicting Likely Donors
 
-Donor Rating App for Nonprofits (R)
-This project provides a complete R-based solution to help nonprofits predict and rank donor likelihood of giving again. The tool uses a logistic regression model to classify donors, generates a ranked scoring system (1–5), and includes a polished Shiny dashboard for easy use by development staff.
+# 🎯 Donor Behavior Prediction & Interactive Analytics Dashboard
 
-🎯 Objective
-To enable nonprofits — even without data teams — to:
+This project demonstrates the use of predictive modeling and interactive dashboard development to help a nonprofit organization identify and target **repeat donors**. The solution includes:
 
-Identify donors most likely to give again
+- A **Jupyter notebook** for data analysis and model building
+- An **R Shiny dashboard** for data exploration and donor segmentation
+- Exportable donor scoring for actionable insights
 
-Improve targeting in fundraising campaigns
+This project is ideal for use in a data science portfolio to demonstrate applied machine learning, business insight generation, and dashboard deployment skills.
 
-Simplify data interpretation through visualization
+---
 
-📊 Features
-Predictive modeling using logistic regression
+## 📊 Project Goals
 
-Scoring system to classify donors (1 to 5)
+- Predict the likelihood that a donor will give again using a logistic regression model
+- Score donors on a scale of **1 to 5** based on their probability of repeat giving
+- Visualize donor distribution, segmentation, and behavioral trends
+- Build a **Shiny dashboard** to interactively explore donor patterns and support fundraising strategy
 
-Exportable donor list with predicted likelihoods
+---
 
-Clean, professional Shiny dashboard
+## 🧪 Machine Learning Model (in R)
 
-Suitable for non-technical staff
+A logistic regression model was used to predict repeat donor behavior based on:
 
-Fully reproducible in RStudio
+- **Demographic and behavioral variables**: age, gender, donation amount, communication channel, donation frequency, and recency
+- Model output: predicted probability of becoming a repeat donor
+- Donors were segmented into **quintiles (1–5)** based on their predicted likelihood
 
-🧪 Model Inputs
-The logistic regression model was trained on the following features:
+The model was developed and validated inside a Jupyter notebook using **R via IRKernel**, ensuring reproducibility and step-by-step interpretability.
 
-Variable	Description
-age	Donor’s age
-gender	Gender identity (categorical)
-donation_amount	Last donation amount
-channel	Fundraising channel used (email, phone, etc)
-frequency	Number of gifts in past year
-recency_days	Days since last donation
+---
 
-🔮 Predicted Output
-A column predicted_prob contains the probability of repeat donation
+## 📂 File Structure
 
-A column donor_score ranks each donor from 1 (low) to 5 (high) likelihood
+.
+├── donor_predictions_with_scores.csv # Final dataset with prediction scores
+├── Donor_Prediction_Model.ipynb # Jupyter notebook for model building
+├── app.R # R Shiny dashboard application
+└── README.md # This file
 
-Output is saved as a CSV file: donor_predictions.csv
+## 🖥️ Running the Shiny Dashboard Locally
 
-💻 Files in This Project
-donor_model.R: The full model-building and scoring script
+> ✅ Prerequisite: You must have [R](https://cran.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/) installed.
 
-donors.csv: Sample donor dataset (or bring your own)
+### 📦 1. Install Required Package
+In RStudio, install the `shiny` package if you haven't already:
 
-donor_predictions.csv: Output of scored donors
+```r
+install.packages("shiny")
+📁 2. Download Project Files
+Download or clone this repository.
 
-app.R: Shiny app source code
+Ensure both app.R and donor_predictions_with_scores.csv are saved in the same folder.
 
-📈 Dashboard Preview (Shiny App)
-The Shiny dashboard allows nonprofits to:
+🚀 3. Launch the App
+Open app.R in RStudio.
 
-Filter donors by score, gender, and channel
+Click the "Run App" button in the top-right corner.
 
-View summary metrics and interactive plots
+The dashboard will open in your browser at http://127.0.0.1:xxxx.
 
-Download the filtered donor list as needed
+📈 Dashboard Features
+The R Shiny dashboard includes:
 
-🚀 How to Run
-1. Requirements
-Ensure you have R and RStudio installed.
+🔍 Filters for gender, communication channel, and score range
 
-Install these packages if not already installed:
+📊 Score Distribution Plot: Visualizes how donors are distributed across score tiers
 
-r
-Copy
-Edit
-install.packages(c("shiny", "dplyr", "ggplot2", "readr"))
-2. Setup
-Download or clone the repository and place both of these files in the same folder:
+📉 Demographic and Channel Insights: Breakdown by gender and donation channel
 
-app.R
+📋 Interactive Donor Table: Explore and export donor records
 
-donor_predictions.csv (generated by donor_model.R)
+📤 Download Button: Export filtered donor lists to CSV
 
-3. Launch the App
-Open app.R in RStudio, then click "Run App" in the top right corner.
+🧠 Key Takeaways
+Demonstrates use of logistic regression for classification tasks
 
-You can now explore the donor ratings interactively.
+Shows how to translate model outputs into practical segmentation scores
 
-📂 Project Structure
-graphql
-Copy
-Edit
-Donor-Rating-App-For-Nonprofits/
-│
-├── donor_model.R         # R script for data prep + modeling
-├── donors.csv            # Sample input dataset
-├── donor_predictions.csv # Output CSV with scores
-└── app.R                 # Shiny app to explore and export results
-🧠 Skills Highlighted
-Logistic Regression (classification)
+Emphasizes explainability, accessibility, and stakeholder usability
 
-Quantile binning for scoring
+Combines statistical modeling with modern web dashboard development
 
-Data wrangling with dplyr
+📌 Use Cases
+This project is a portfolio artifact for data science, nonprofit consulting, or business analytics roles. It illustrates the end-to-end pipeline from raw data to deployment-ready insights.
 
-Interactive UI design using Shiny
+🤝 Acknowledgments
+Created by Ronald Parent as part of a portfolio of business-focused data science applications. This project aims to help small to midsize organizations and nonprofits leverage their data for smarter decision-making.
 
-Reproducible R code for non-data teams
+https://precisiondatastrategies.com
+
+
