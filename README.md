@@ -36,7 +36,6 @@ The model was developed and validated inside a Jupyter notebook using **R via IR
 
 ## 📂 File Structure
 
-.
 ├── donor_predictions_with_scores.csv # Final dataset with prediction scores
 ├── Donor_Prediction_Model.ipynb # Jupyter notebook for model building
 ├── app.R # R Shiny dashboard application
