@@ -32,15 +32,6 @@ A logistic regression model was used to predict repeat donor behavior based on:
 
 The model was developed and validated inside a Jupyter notebook using **R via IRKernel**, ensuring reproducibility and step-by-step interpretability.
 
----
-
-## 📂 File Structure
-
-├── donor_predictions_with_scores.csv # Final dataset with prediction scores
-├── Donor_Prediction_Model.ipynb # Jupyter notebook for model building
-├── app.R # R Shiny dashboard application
-└── README.md # This file
-
 ## 🖥️ Running the Shiny Dashboard Locally
 
 > ✅ Prerequisite: You must have [R](https://cran.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/) installed.
